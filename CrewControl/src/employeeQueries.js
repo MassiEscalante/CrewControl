@@ -1,5 +1,5 @@
-const pool = require('./connection');
-const inquirer = require('inquirer');
+import pool from './connection.js';
+import inquirer from 'inquirer'; 
 
 //To view all departments
 const viewAllDepartments = () => {
@@ -117,4 +117,4 @@ const updateEmployeeRole = () => {
   });
 };
 
-module.exports = { viewAllDepartments, viewAllRoles, viewAllEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole };
+export { viewAllDepartments, viewAllRoles, viewAllEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole };

@@ -1,14 +1,16 @@
 {
   "name": "crewcontrol",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Massiel Escalante",
   "license": "ISC",
-  "description": "",
+  "description": "A command-line application to manage a company's employee database.",
   "dependencies": {
     "dotenv": "^16.4.5",
     "inquirer": "^12.0.0",

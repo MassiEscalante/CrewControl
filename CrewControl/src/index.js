@@ -1,6 +1,16 @@
-const inquirer = require('inquirer');
-const { viewAllDepartments, viewAllRoles, viewAllEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./employeeQueries');
+import inquirer from 'inquirer'; 
+import { 
+  viewAllDepartments, 
+  viewAllRoles, 
+  viewAllEmployees, 
+  addDepartment, 
+  addRole, 
+  addEmployee, 
+  updateEmployeeRole 
+} from './employeeQueries.js';
 
+// TODO: Create an async function for handling the main menu prompts
+// This function will prompt the user for different actions
 const mainMenu = () => {
   inquirer.prompt([
     {
@@ -18,7 +28,9 @@ const mainMenu = () => {
         'Exit'
       ]
     }
-  ]).then(({ action }) => {
+  ])
+  .then(({ action }) => {
+    // TODO: Based on the user's choice, call the appropriate function to interact with the database
     switch (action) {
       case 'View all departments':
         viewAllDepartments();
@@ -42,12 +54,18 @@ const mainMenu = () => {
         updateEmployeeRole();
         break;
       case 'Exit':
+        // Exit the process when the user chooses to quit
         process.exit();
         break;
       default:
+        // If no valid action is selected, return to the main menu
         mainMenu();
     }
+  })
+  .catch(err => {
+    console.error(err);
   });
 };
 
+// TODO: Call the mainMenu function to initiate the app
 mainMenu();
