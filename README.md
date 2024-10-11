@@ -22,4 +22,4 @@ How to interact with a PostgreSQL database using SQL queries, work with user inp
 
 ## Preview Video 🎥
 
-Check out a preview of the **CrewControl** project in action [here](#). 📽️
+Check out a preview of the **CrewControl** project in action [here](https://drive.google.com/file/d/14qt-jM6r3uuaPOHfZ1pXUU6ct50HdUFr/view). 📽️
